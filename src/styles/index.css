@@ -3,24 +3,33 @@
 @config "../tailwind.config.js";
 
 :root {
-  --color-desktop: #018281;
+  --color-desktop: #008080;
 
-  --color-window: #ece9d8;
+  --color-window: #c0c0c0;
+
   --color-content: #ffffff;
 
-  --color-titlebar-start: #245edb;
-  --color-titlebar-end: #1941a5;
+  --color-titlebar-start: #000080;
 
-  --color-text: #1a1a1a;
-  --color-text-muted: #606060;
+  --color-titlebar-end: #000080;
+
+  --color-text: #000000;
+
+  --color-text-muted: #808080;
 
   --color-border-dark: #808080;
-  --color-border-middle: #aca899;
+
+  --color-border-middle: #dfdfdf;
+
   --color-border-light: #ffffff;
 
-  --color-link: #0000cc;
+  --color-border-black: #000000;
+
+  --color-link: #0000ff;
+
   --color-link-hover: #000080;
-  --color-focus: #245edb;
+
+  --color-focus: #000080;
 }
 
 html {
@@ -30,18 +39,38 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
+
   margin: 0;
+
   background: var(--color-desktop);
+
   color: var(--color-text);
-  font-family: Tahoma, Verdana, Arial, sans-serif;
-  text-rendering: optimizeLegibility;
+
+  overflow: hidden;
+
+  font-family:
+    "MS Sans Serif",
+    "Microsoft Sans Serif",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+
+  -webkit-font-smoothing: none;
+  text-rendering: optimizeSpeed;
 }
 
 a {
-  color: var(--color-text);
+  color: var(--color-link);
   text-decoration: none;
   font-family: Tahoma, Verdana, Arial, sans-serif;
   size: 8px;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
 }
 
 a:hover {
@@ -60,4 +89,49 @@ button:hover {
 :focus-visible {
   outline: 2px solid var(--color-focus);
   outline-offset: 2px;
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 3rem;
+  padding: 2px;
+
+  display: flex;
+  justify-content: space-between;
+  background: #c0c0c0;
+
+  border-top: 1px solid #ffffff;
+
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+.taskbar-button {
+  background: #c0c0c0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  padding: 0.25rem 0.5rem;
+  box-shadow:
+    inset -1px -1px #808080,
+    inset 1px 1px #dfdfdf;
+
+  height: 100%;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 0.5rem;
+  color: white;
+  text-shadow: 1px 1px 0px #000000;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
 }

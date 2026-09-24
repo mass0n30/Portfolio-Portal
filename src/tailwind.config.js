@@ -7,7 +7,17 @@ export default {
     extend: {
       // Keep Tailwind's normal breakpoints and add only the smaller one.
       screens: {
-        xs: "480px",
+        'xs': '480px',
+
+        'sm': '640px',
+        // scale down font further and adjust flex/grid layouts possibly?
+
+        'md': '1000px',
+        // scaled down font and flex/grid changes
+
+        'lg': '1280px',
+        // default beyond this at 1280px
+
       },
 
       colors: {
